@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)file:///C:/Users/umair.ul.haque/IAASNewJoiners/NewJoiners.html -->
+<html xmlns:wairole="http://www.w3.org/2005/01/wai-rdf/GUIRoleTaxonomy#" lang="en-US" xmlns:waistate="http://www.w3.org/2005/07/aaa"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Content-Language" content="en"><meta name="viewport" content="width=device-width, user-scalable=1, initial-scale=1.0"><title>
+	Home 
+</title><link rel="icon" href="https://reservations.accenture.com/reserve-space/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="https://reservations.accenture.com/reserve-space/ShortcutIcon.ico" type="image/x-icon"><link rel="apple-touch-icon" href="./NewJoiners_files/ems-app-icon.png"><link href="./NewJoiners_files/font-open-sans" rel="stylesheet">
+<link href="./NewJoiners_files/font-awesome" rel="stylesheet">
+<link href="./NewJoiners_files/dx" rel="stylesheet">
+<link href="./NewJoiners_files/perfect-scrollbar" rel="stylesheet">
+<link href="./NewJoiners_files/core.css" rel="stylesheet">
+<link href="./NewJoiners_files/plugins" rel="stylesheet">
+<link href="./NewJoiners_files/jHtmlArea.css" rel="stylesheet"><link href="./NewJoiners_files/jquery-ui.min.css" rel="stylesheet">
+    <style>
+        #page-title {
+            width: 50%;
+        }
+
+            #page-title h1 {
+                overflow: hidden;
+                -ms-text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100%;
+            }
+
+        .date-picker-today-btn::after {
+            content: "Today";
+        }
+    </style>
+    <link href="./NewJoiners_files/login.css" rel="stylesheet">
+<script src="./NewJoiners_files/moment"></script>
+<script src="./NewJoiners_files/jquery"></script>
+<script src="./NewJoiners_files/jquery-plugins"></script>
+<script src="./NewJoiners_files/bootstrap"></script>
+<script src="./NewJoiners_files/knockout"></script>
+<script src="./NewJoiners_files/perfect-scrollbar(1)"></script>
+<script src="./NewJoiners_files/dx-dependencies"></script>
+<script src="./NewJoiners_files/dx(1)"></script>
+<script src="./NewJoiners_files/touche"></script>
+<script src="./NewJoiners_files/hammer"></script>
+<script src="./NewJoiners_files/bleach"></script>
+<script src="./NewJoiners_files/vems"></script>
+<script src="./NewJoiners_files/vems-plugins"></script>
+
+    <link href="./NewJoiners_files/leaflet" rel="stylesheet">
+
+    <script src="./NewJoiners_files/leaflet(1)"></script>
+
+    <script src="./NewJoiners_files/home"></script>
+
+    <link href="./NewJoiners_files/calendar-scroller" rel="stylesheet">
+
+    <style>
+        #page-title-responsive h1 {
+            float: left;
+        }
+
+        #new-booking {
+            float: right;
+            line-height: 2.5em;
+        }
+
+        .calendar-scroller-container .calendar-scroller-cal {
+            height: 60px;
+        }
+
+        .calendar-cell-container {
+            height: 50px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form method="post" action="" id="VirtualEmsForm" novalidate="novalidate">
+
+        <div id="showMobile" class="hidden" style="vertical-align: middle; text-align: center; position: fixed; top: 0; left: 0; right: 0; width: auto; height: 80px; background-color: #F1F1F1; z-index: 998;">
+            <div class="container-fluid" style:"margin:="" auto;="" vertical-align:="" center;"="">
+                <div class="center-block" style="min-height: 100%; display: flex; align-items: center; vertical-align: middle; margin: auto;">
+                    <a id="dismissMobile" class="alert-link" style="vertical-align: middle; text-align: left; margin-right: 10px;">
+                        <h3 style="color: #929292;">
+                            <label for="dismiss-mobile-close" class="hide-element">Close</label>
+                            <i id="dismiss-mobile-close" class="fa fa-close"></i>
+                        </h3>
+                    </a>
+                    <img src="./NewJoiners_files/ems-app-icon.png" alt="logo" style="max-width: 50px; height: auto; display: inline-block; text-align: right; vertical-align: middle;">
+                    <div class="col-xs-6" style="display: inline-block; vertical-align: middle;  text-align: left;">
+                        <h4>Mobile View</h4>
+                    </div>
+                    <a id="launchMobile" class="intent alert-link" style="display: inline-block; vertical-align: middle; text-align: left; margin: 10px;" data-scheme="emssoftware://">
+                        <h3 style="color: #007AFF">Open</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="page-loading-overlay" style="display: none;">
+            <img class="loading-animation" src="./NewJoiners_files/Loading.gif" alt="Loading...">
+        </div>
+        <h1 id="ApplicationTitle" class="ApplicationTitle hide">
+	<p>New Joiners Documentation</p>
+</h1>
+        <nav id="vems-navbar-top" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div id="nav-logo-section" class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" onclick="vems.toggleSideBar();">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-navicon"></i>
+                    </button>
+                    <div class="navbar-brand">
+                        <a class="ems-logo-link" href="#Home">
+                            <img src="./NewJoiners_files/customlogo.png" class="ems-logo" alt="EMS" title="EMS">
+                        </a>
+                    </div>
+                </div>
+
+                <div id="page-title" class="navbar-header">
+                    <h1>New Joiners Documentation</h1>
+                </div>
+
+                
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav" data-bind="foreach: mainMenuItems">
+                    <!-- HR before the Links menu -->
+                    <!-- ko if: Id == 4  --><!-- /ko -->
+
+                    <!-- hide My Events on Mobile Web -->
+                    <!-- ko ifnot: DevExpress.devices.real().phone && Id === 9 -->
+                    <li data-bind="css: { &#39;no-click&#39;: NavigateUrl.length == 0 }">
+                        <a data-bind="css: { &#39;current-page&#39;: $root.OnMenuItemPage(NavigateUrl) }, attr: {&#39;href&#39;: NavigateUrl.length &gt; 0 ? NavigateUrl : &#39;#&#39;, &#39;title&#39;: vems.decodeHtml(Text)}, click: $root.menuItemClicked" class="current-page" href="#Wiki" title="Wiki">
+                            <i class="fa fa-home" data-bind="css: IconClass"></i>
+                            <span data-bind="text: vems.decodeHtml(Text)">Home</span>
+                        </a>
+                    </li>
+
+                    <div data-bind="foreach: ChildMenus"></div>
+                    <!-- /ko -->
+                
+                    <!-- HR before the Links menu -->
+                    <!-- ko if: Id == 4  --><!-- /ko -->
+
+                    <!-- hide My Events on Mobile Web -->
+                    <!-- ko ifnot: DevExpress.devices.real().phone && Id === 9 -->
+                    <li data-bind="css: { &#39;no-click&#39;: NavigateUrl.length == 0 }">
+                        <a data-bind="css: { &#39;current-page&#39;: $root.OnMenuItemPage(NavigateUrl) }, attr: {&#39;href&#39;: NavigateUrl.length &gt; 0 ? NavigateUrl : &#39;#&#39;, &#39;title&#39;: vems.decodeHtml(Text)}, click: $root.menuItemClicked" href="#GettingStarted" title="Getting Started">
+                            <i class="fa fa-calendar-plus-o" data-bind="css: IconClass"></i>
+                            <span data-bind="text: vems.decodeHtml(Text)">Getting Started</span>
+                        </a>
+                    </li>
+
+                    <div data-bind="foreach: ChildMenus"></div>
+                    <!-- /ko -->
+                
+                    <!-- HR before the Links menu -->
+                    <!-- ko if: Id == 4  --><!-- /ko -->
+
+                    <!-- hide My Events on Mobile Web -->
+                    <!-- ko ifnot: DevExpress.devices.real().phone && Id === 9 -->
+                    <li data-bind="css: { &#39;no-click&#39;: NavigateUrl.length == 0 }">
+                        <a data-bind="css: { &#39;current-page&#39;: $root.OnMenuItemPage(NavigateUrl) }, attr: {&#39;href&#39;: NavigateUrl.length &gt; 0 ? NavigateUrl : &#39;#&#39;, &#39;title&#39;: vems.decodeHtml(Text)}, click: $root.menuItemClicked" href="#FAQ" title="FAQ">
+                            <i class="fa fa-th" data-bind="css: IconClass"></i>
+                            <span data-bind="text: vems.decodeHtml(Text)">FAQ</span>
+                        </a>
+                    </li>
+
+                    <div data-bind="foreach: ChildMenus"></div>
+                    <!-- /ko -->
+                
+                    <!-- HR before the Links menu -->
+                    <!-- ko if: Id == 4  --><!-- /ko -->
+
+                    <!-- hide My Events on Mobile Web -->
+                    <!-- ko ifnot: DevExpress.devices.real().phone && Id === 9 -->
+                    <li data-bind="css: { &#39;no-click&#39;: NavigateUrl.length == 0 }" class="no-click">
+                        <a data-bind="css: { &#39;current-page&#39;: $root.OnMenuItemPage(NavigateUrl) }, attr: {&#39;href&#39;: NavigateUrl.length &gt; 0 ? NavigateUrl : &#39;#&#39;, &#39;title&#39;: vems.decodeHtml(Text)}, click: $root.menuItemClicked" href="#Locations" title="Browse">
+                            <i class="fa fa-search" data-bind="css: IconClass"></i>
+                            <span data-bind="text: vems.decodeHtml(Text)">Browse</span>
+                        </a>
+                    </li>
+
+                    <div data-bind="foreach: ChildMenus">
+                        <li class="secondary" data-bind="css: { &quot;resource-link&quot;: $parent.Id == 4 }">
+                            <a data-bind="css: { &#39;current-page&#39;: $root.OnMenuItemPage(NavigateUrl) }, attr: {&#39;href&#39;: NavigateUrl, &#39;title&#39;: vems.decodeHtml(Text)}, click: $root.menuItemClicked" href="#Locations" title="Locations">
+                                <i class="fa fa-map-marker" data-bind="css: IconClass"></i>
+                                <span data-bind="text: vems.decodeHtml(Text)">Locations</span>
+                            </a>
+                        </li>
+                    
+                        <li class="secondary" data-bind="css: { &quot;resource-link&quot;: $parent.Id == 4 }">
+                            <a data-bind="css: { &#39;current-page&#39;: $root.OnMenuItemPage(NavigateUrl) }, attr: {&#39;href&#39;: NavigateUrl, &#39;title&#39;: vems.decodeHtml(Text)}, click: $root.menuItemClicked" href="#People" title="People">
+                                <i class="fa fa-users" data-bind="css: IconClass"></i>
+                                <span data-bind="text: vems.decodeHtml(Text)">People</span>
+                            </a>
+                        </li>
+                    </div>
+                    <!-- /ko -->
+                
+                    <!-- HR before the Links menu -->
+                    <!-- ko if: Id == 4  -->
+                    <li>
+                        <hr>
+                    </li>
+                    <!-- /ko -->
+
+                    <!-- hide My Events on Mobile Web -->
+                    <!-- ko ifnot: DevExpress.devices.real().phone && Id === 9 -->
+                    <li data-bind="css: { &#39;no-click&#39;: NavigateUrl.length == 0 }" class="no-click">
+                        <a data-bind="css: { &#39;current-page&#39;: $root.OnMenuItemPage(NavigateUrl) }, attr: {&#39;href&#39;: NavigateUrl.length &gt; 0 ? NavigateUrl : &#39;#&#39;, &#39;title&#39;: vems.decodeHtml(Text)}, click: $root.menuItemClicked" href="#Links" title="Links">
+                            <i class="fa fa-external-link-square" data-bind="css: IconClass"></i>
+                            <span data-bind="text: vems.decodeHtml(Text)">Links</span>
+                        </a>
+                    </li>
+
+                    <div data-bind="foreach: ChildMenus">
+                    
+                        <li class="secondary resource-link" data-bind="css: { &quot;resource-link&quot;: $parent.Id == 4 }">
+                            <a data-bind="css: { &#39;current-page&#39;: $root.OnMenuItemPage(NavigateUrl) }, attr: {&#39;href&#39;: NavigateUrl, &#39;title&#39;: vems.decodeHtml(Text)}, click: $root.menuItemClicked" href="#Links" title="Video Tutorials">
+                                <i class="fa" data-bind="css: IconClass"></i>
+                                <span data-bind="text: vems.decodeHtml(Text)">Video tutorials</span>
+                            </a>
+                        </li>
+                    
+                    </div>
+                    <!-- /ko -->
+                </ul>
+            </div>
+            <!-- end sidebar-wrapper -->
+
+            <div id="page-content-wrapper">
+                <div class="container-fluid main-content" id="page">
+
+                    <div id="page-title-responsive">
+                        <h1>New Joiners Documentation</h1>
+                    </div>
+
+                    <div id="Summary" class="errorSummary" style="color:Red;display:none;">
+
+</div>
+
+                    
+                    
+    <span style="display: none">
+        <h1 id="pc_ApplicationTitle" class="ApplicationTitle">
+	<p>New Joiners Help</p>
+</h1>
+    </span>
+    <div id="home" style="xborder:solid 1px Black;height: 75vh;">
+        
+        <ul id="default-tablist" class="nav nav-tabs" role="tablist">
+            <li role="presentation" id="site-home-tab" class="active" style='xborder: solid 1px Green'><a href="#site-home" data-toggle="tab" role="tab" aria-expanded="true">Site Home</a></li>
+            <li role="presentation" id="my-home-tab" class=""><a href="#my-home" data-toggle="tab" role="tab" aria-expanded="false">My Home</a></li>
+            
+            
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content" style='xborder: solid 1px red;height:100%'>
+            <div role="tabpanel" class="tab-pane fade active in" id="site-home" style='height:100%'> 
+                <div class="default-page-help-text" style='height:100%'> 
+                    <div id="pc_HomeHelp" class="default-page-help-text-content" style='height:100%'> 
+                        <iframe allowtransparency="true" frameborder='0' style="border:0;background-color:[COLOR='#FF0000']999[/COLOR]" src="Documents\New Joiner Onboarding FAQs V1.1.pdf#view=FitH&toolbar=0" width="100%" height="100%"></iframe> 
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="my-home">
+                <div id="my-home-content" style="">
+                    <!-- My Reservation Templates -->
+                    <div id="my-reservation-templates" class="hidden-xs">
+                        <h2>My Home</h2>
+                        <div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- about template modal -->
+    <div class="modal fade" id="template-modal" tabindex="-1" role="dialog" aria-labelledby="template-modal-aria-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="template-modal-content" data-bind="component: { name: &#39;web-template-modal-component&#39;, params: $root }"></div>
+        </div>
+    </div>
+    <!-- endnow modal -->
+    <div class="modal fade" id="endnow-modal" tabindex="-1" role="dialog" aria-labelledby="default-aspx-endnow-modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="endnow-modal-content">
+                <div class="modal-header">
+                    <button id="close-endnow-button" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h3 class="modal-title" id="default-aspx-endnow-modal-title">Are you sure you want to end this booking now?</h3>
+                </div>
+                <div class="modal-body">
+				    <p class="date"></p>
+				    <p class="event-name"></p>
+				    <p class="location"></p>
+			    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" id="endBookingBtn">Yes, End Booking</button>
+                    <button id="no-endnow-button" type="button" class="btn btn-primary" data-dismiss="modal">No, Don't End</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- booking details modal -->
+    <div id="booking-details-comp" data-bind="component: { name: &quot;booking-details-component&quot;, params: { ScreenText: {
+        TimeText: &quot;Time&quot;,
+        DateText: &quot;Date&quot;,
+        EventNameText: &quot;Event Name&quot;,
+        LocationText: &quot;Location&quot;,
+        GroupNameText: &quot;Customer Name&quot;,
+        NoBookingsMessage: &quot;No bookings exist for this event.&quot;,
+        BookingDetailsText: &quot;Booking Details&quot;,
+        EventDetailsText: &quot;Event Details&quot;,
+        RelatedEventsText: &quot;Related Events&quot;,
+        DownloadIcsText: &quot;Add to My Calendar&quot;,
+        ShareText: &quot;Share&quot;,
+        CloseText: &quot;Close&quot;,
+        EditText: &quot;edit&quot;,
+        FirstBookingText: &quot;First Booking&quot;,
+        LastBookingText: &quot;Last Booking&quot;,
+        CheckedInText: &quot;Checked In&quot;,
+        CheckInText: &quot;Check In&quot;,
+        CancelText: &quot;Cancel&quot;,
+        EndNowText: &quot;End Now&quot;,
+        EndNowConfirmText: &quot;Are you sure you want to end this booking now?&quot;,
+        YesEndBookingText: &quot;Yes, End Booking&quot;,
+        NoDontEndText: &quot;No, Don&#39;t End&quot;,
+        CancelBookingQuestionText: &quot;Cancel Booking?&quot;,
+        CancelReasonText: &quot;Cancel Reason&quot;,
+        CancelNotesText: &quot;Cancel Notes&quot;,
+        YesCancelText: &quot;Yes, Cancel Booking&quot;,
+        NoCancelText: &quot;No, Keep Booking&quot;} } }"><div class="modal fade" id="booking-details-modal" tabindex="-1" role="dialog" aria-labelledby="booking-details-booking-details-modal-title">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title" id="booking-details-booking-details-modal-title" data-bind="text: ScreenText.BookingDetailsText">Booking Details</h3>
+            </div>
+            <div class="modal-body">
+                <ul id="booking-details-tabs" class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="https://reservations.accenture.com/reserve-space/Default.aspx#detailsContainer" aria-controls="detailsContainer" role="tab" data-toggle="tab" data-bind="text: ScreenText.EventDetailsText">Event Details</a>
+                    </li>
+                    <!-- ko if: !vems.bookingDetailsVM.IsMobile() -->
+                    <li role="presentation">
+                        <a href="https://reservations.accenture.com/reserve-space/Default.aspx#relatedEventsContainer" aria-controls="relatedEventsContainer" role="tab" data-toggle="tab" data-bind="text: ScreenText.RelatedEventsText">Related Events</a>
+                    </li>
+                    <!-- /ko -->
+                    <a id="VEMSBookingDetails" class="fa fa-question-circle help-text-icon" data-helptextkey="VEMSBookingDetails" aria-label="Click to open help about the booking details section" data-parenttype="None" data-parentid="0" style="display: none;" href="https://reservations.accenture.com/reserve-space/Default.aspx#"></a>
+                </ul>
+                <div class="tab-content">
+                    <div id="detailsContainer" role="tabpanel" class="tab-pane fade in active">
+                        <div class="modal-loading-overlay">
+                            <img class="loading-animation" src="./NewJoiners_files/Loading.gif" alt="Loading...">
+                        </div>
+                        <table class="table table-striped">
+                            <tbody data-bind="foreach: $data.details()"></tbody>
+                        </table>
+                    </div>
+                    <!-- ko if: !vems.bookingDetailsVM.IsMobile() -->
+                    <div id="relatedEventsContainer" role="tabpanel" class="tab-pane fade">
+                        <div id="booking-details-grid-container" class="table-responsive">
+                            <table id="booking-details-grid" class="table table-striped table-sort">
+                                <thead>
+                                    <tr>
+                                        <!-- ko if: vems.bookingDetailsVM.ShowICS() --><!-- /ko -->
+                                        <th>
+                                            <div data-bind="text: ScreenText.DateText">Date</div>
+                                        </th>
+                                        <th>
+                                            <div data-bind="text: ScreenText.TimeText">Time</div>
+                                        </th>
+                                        <!-- ko if: !vems.bookingDetailsVM.SuppressEventName() -->
+                                        <th>
+                                            <div data-bind="text: ScreenText.EventNameText">Event Name</div>
+                                        </th>
+                                        <!-- /ko -->
+                                        <!-- ko if: vems.bookingDetailsVM.ShowLocation() --><!-- /ko -->
+                                        <!-- ko if: vems.bookingDetailsVM.ShowGroupName() --><!-- /ko -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- ko fastForEach: {data: vems.bookingDetailsVM.Bookings} --><!-- /ko -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- ko if: IsMobile() && (IsCheckedIn() || ShowCheckinButton() || AllowCancel() || AllowEndNow()) --><!-- /ko -->
+                <!-- ko if: ShowICS() && !IsMobile() --><!-- /ko -->
+                <div id="add-this-container" class="pull-left"></div>
+                <!-- ko if: ConferenceURL().length > 0 --><!-- /ko -->
+                <button type="button" class="btn btn-primary" id="close-btn" data-dismiss="modal" data-bind="text: ScreenText.CloseText">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- endnow modal -->
+    <div class="modal fade" id="endnow-modal-bd" tabindex="-1" role="dialog" aria-labelledby="booking-details-aspx-endnow-modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="endnow-modal-content-bd">
+                <div class="modal-header">
+                    <button id="close-endnow-button" type="button" class="close" data-bind="click: closeEndNowModal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h3 class="modal-title" id="booking-details-aspx-endnow-modal-title" data-bind="text: ScreenText.EndNowConfirmText">Are you sure you want to end this booking now?</h3>
+                </div>
+                <div class="modal-body">
+                    <p class="date"></p>
+                    <p class="event-name"></p>
+                    <p class="location"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" id="endBookingBtn-bd" data-bind="text: ScreenText.YesEndBookingText">Yes, End Booking</button>
+                    <button id="no-endnow-button" type="button" class="btn btn-primary" data-bind="text: ScreenText.NoDontEndText, click: closeEndNowModal">No, Don't End</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cancel modal -->
+    <div class="modal fade" id="cancel-modal-bd" tabindex="-1" role="dialog" aria-labelledby="booking-details-template-aspx-cancel-modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="cancel-modal-content-bd">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-label="Close" data-bind="click: closeCancelModal"><span aria-hidden="true">×</span></button>
+                    <h3 class="modal-title" id="booking-details-template-aspx-cancel-modal-title" data-bind="text: ScreenText.CancelBookingQuestionText">Cancel Booking?</h3>
+                </div>
+                <div class="modal-body">
+                    <p class="date"></p>
+                    <p class="event-name"></p>
+                    <p class="location"></p>
+                    <div class="vc-host-warning" style="display: none;">
+	                    <img class="vc-host-warning-icon" src="./NewJoiners_files/diamond-alert.png" alt="Warning">
+	                    <span class="vc-host-warning-message">This booking is set as the VC host.<br>Cancelling this booking will also cancel all other locations on this date.</span>
+                    </div>
+                    <div class="cal-occ-warning" style="display: none;">
+	                    <img class="cal-occ-warning-icon" src="./NewJoiners_files/diamond-alert.png" alt="Warning">
+	                    <span class="cal-occ-warning-message">This booking is part of a Calendar Occurrence.<br>Cancelling this location will cancel all locations with same date/time.<br>To cancel a single location, Edit the booking.</span>
+                    </div>
+                    <div class="reason dropdown form-group">
+                        <label class="control-label" for="bd-cancel-reason" data-bind="text: ScreenText.CancelReasonText">Cancel Reason</label>
+                        <select id="bd-cancel-reason" class="form-control required" data-bind="fastForEach: { data: CancelReasons }"></select>
+                    </div>
+                    <div class="notes form-group">
+                        <label class="control-label" for="bd-cancel-notes" data-bind="text: ScreenText.CancelNotesText">Cancel Notes</label>
+                        <textarea id="bd-cancel-notes" class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" id="cancel-btn-yes-bd" data-bind="text: ScreenText.YesCancelText">Yes, Cancel Booking</button>
+                    <button type="button" class="btn btn-primary" id="cancel-btn-no-bd" data-bind="text: ScreenText.NoCancelText, click: closeCancelModal">No, Keep Booking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+    <!-- location details modal -->
+    <div id="location-details-comp" data-bind="component: { name: &quot;location-details-component&quot;, params: { } }">
+
+<div class="modal fade" id="location-details-modal" tabindex="-1" role="dialog" aria-labelledby="location-details-template-aspx-locations-details-modal-title">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title" id="location-details-template-aspx-locations-details-modal-title"><span>about</span> <span data-bind="text: vems.decodeHtml(roomDescription())"></span></h3>
+            </div>
+            <div class="modal-body">
+                <ul id="location-details-tabs" class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active location-details-tab" style="max-width: 25%;">
+                        <a href="https://reservations.accenture.com/reserve-space/Default.aspx#mainContainer" aria-controls="mainContainer" role="tab" data-toggle="tab">Room Details</a>
+                    </li>
+                    <li role="presentation" class="location-details-tab" style="max-width: 20%;">
+                        <a href="https://reservations.accenture.com/reserve-space/Default.aspx#setupContainer" aria-controls="setupContainer" role="tab" data-toggle="tab" data-bind="visible: setupDetails().length &gt; 0" style="display: none;">Setup Types</a>
+                    </li>
+                    <li role="presentation" class="location-details-tab" style="max-width: 20%;">
+                        <a href="https://reservations.accenture.com/reserve-space/Default.aspx#featuresContainer" aria-controls="featuresContainer" role="tab" data-toggle="tab" data-bind="visible: features().length &gt; 0" style="display: none;">Features</a>
+                    </li>
+                    <li role="presentation" class="location-details-tab" style="max-width: 15%;">
+                        <a href="https://reservations.accenture.com/reserve-space/Default.aspx#imagesContainer" aria-controls="imagesContainer" role="tab" data-toggle="tab" data-bind="visible: images().length &gt; 0" style="display: none;">Images</a>
+                    </li>
+                    <li role="presentation" data-bind="visible: vems.hasBrowseForSpace === 1" class="location-details-tab" style="max-width: 20%;">
+                        <a href="https://reservations.accenture.com/reserve-space/Default.aspx#availabilityContainer" aria-controls="availabilityContainer" role="tab" data-toggle="tab" id="availability-tab">Availability</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="mainContainer" role="tabpanel" class="tab-pane active">
+                        <table class="table table-striped">
+                            <thead class="sr-only">
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: details"></tbody>
+                        </table>
+                    </div>
+                    <div id="setupContainer" role="tabpanel" class="tab-pane">
+                        <table class="table table-striped">
+                            <thead class="sr-only">
+                                <tr>
+                                    <th>Setup Type</th>
+                                    <th>Min Capacity</th>
+                                    <th>Max Capacity</th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: setupDetails"></tbody>
+                        </table>
+                    </div>
+                    <div id="featuresContainer" role="tabpanel" class="tab-pane">
+                        <table class="table table-striped">
+                            <thead class="sr-only">
+                                <tr>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: features"></tbody>
+                        </table>
+                    </div>
+                    <div id="imagesContainer" role="tabpanel" class="tab-pane">
+                        <div class="row" data-bind="foreach: images"></div>
+                    </div>
+                    <div id="availabilityContainer" role="tabpanel" class="tab-pane" style="overflow-y: hidden;">
+                        <div class="row" style="margin-bottom: 30px;">
+                            <div class="col-sm-8 col-xs-12">
+                                <div class="col-sm-3 col-xs-3">
+                                    <button class="btn btn-main" type="button" id="available-previous" data-bind="click: changeAvailableDate">
+                                        <i class="fa fa-chevron-left"></i>
+                                        <span data-bind="text: moment(availableStartDate()).add(-1, &#39;day&#39;).format(&#39;ddd&#39;)">Wed</span>
+                                    </button>
+                                </div>
+                                <div class="col-sm-7 col-xs-6">
+                                    <span style="font-size: 1.3em; display: block; text-align: center;" data-bind="text: moment(availableStartDate()).format(&#39;ddd, LL&#39;)">Thu, November 12, 2020</span>
+                                </div>
+                                <div class="col-sm-2 col-xs-2">
+                                    <button class="btn btn-main" type="button" id="available-next" data-bind="click: changeAvailableDate">
+                                        <span data-bind="text: moment(availableStartDate()).add(1, &#39;day&#39;).format(&#39;ddd&#39;)">Fri</span>
+                                        <i class="fa fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 hidden-xs">
+                                <span class="float-right" style="margin-right: 15px; font-size: 1.3em;" data-bind="text: timeZoneTitle()"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="room-availability-control"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="location-details-view-all-btn" data-bind="click: viewAllDetailsClicked, visible: !hideViewAllDetails()">View All Building &amp; Room Details</button>
+                <button type="button" class="btn btn-primary" id="location-details-close-btn" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- building/room image modal -->
+<div class="modal fade" id="bldg-room-image-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img id="bldg-room-image-img" src="./NewJoiners_files/Default.aspx" alt="" title="">
+                <a href="https://reservations.accenture.com/reserve-space/Default.aspx#" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-close"></i></span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+    <!-- floor plan modal -->
+    <div id="floorplan-component-modal" data-bind="component: { name: &quot;floorplans-reserve-modal&quot;, params: { 
+    RoomInfo: new FloorMapRoomInfo(),
+    renderType: &quot;modal&quot;,
+    ScreenText: {
+        RequestText: &quot;Request    &quot;,
+        ReserveText: &quot;Reserve    &quot;,
+        RoomDetailsText: &quot;Room Details&quot;,
+        RoomCodeText: &quot;Room Code&quot;,
+        RoomDescriptionText: &quot;Description    &quot;,
+        RoomTypeText: &quot;Room Type&quot;,
+        AvailabilityText: &quot;Availability    &quot;,
+        AvailableText: &quot;Available    &quot;,
+        UnavailableText: &quot;Unavailable    &quot;,
+        StartTimeText: &quot;Start Time    &quot;,
+        EndTimeText: &quot;End Time    &quot;,
+        TitleText: &quot;Title    &quot;,
+        GroupNameText: &quot;Customer&quot;
+} } }">
+
+<div class="modal fade floormap-modal" id="floormap-modal" tabindex="-1" role="dialog" aria-labelledby="floor-plans-reserve-modal-aspx-foormap-modal-title" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width: 810px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title" id="floor-plans-reserve-modal-aspx-foormap-modal-title">
+                    Floor Map
+                </h3>
+            </div>
+            <div class="modal-body">
+                <div id="mobile-modal-map" data-bind="visible: isPhone()" style="height: 375px; max-width: 380px; display: none;"></div>
+                <div id="modal-map" data-bind="visible: !isPhone()" style="height: 600px; width: 100%"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#floormap-modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+                    <div id="CallbackStatus" style="display: none; z-index: 100" class="callbackStatus">
+                        <img id="LoadingImage" src="./NewJoiners_files/Loading.gif" alt="Loading...">
+                        <span id="LoadingText">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <!-- end page-content-wrapper -->
+
+        </div>
+        <!-- end wrapper -->
+    
+</form>
+
+</div>                
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1"><title>
+	EMS Web App Error
+</title>
+       <style media="screen" type="text/css">
+        /*The Text that is centered about the menu*/
+        h1
+        {
+	        color: #225d92;
+	        float:left;
+	        margin-left:auto;
+	        text-align:center;
+	        width:80%;
+	        display:block;
+        }
+        .float
+        {
+            float:left;   
+        }
+        .row
+        {
+            clear:both;
+            padding-top:.3em;
+        }
+        </style> 
+</head>
+<body>
+    <form method="post" action="./Error.aspx?aspxerrorpath=%2freserve-space%2fContent%2fjqueryui.1.12.1%2fjquery-ui.min.css" id="VirtualEmsForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="h/RC3b1Mokc57kNZw/kShsyZJqQ5XR3zbt8jQsvhCYYwCubawtr0pTHajzs3M8QXSzRvdKTD3sgwNz251HD5Mq88zEMdFbd/ZhfdH8zACUIHXcoA9Q534fkOPEufIk/VEMC30dIe7jE2Cqwppy+4Ab8EGc7he9sr625LR8NM3+i6Avc3Xs1nbuEYCvCPTP5F5tC5mJGhCmzMDZZnH4dQUwh9PoLRs/x7TAy7bk2SdEaGqcVsBV1GQiiE5VADH4584unHwqzGf+RJrZOAKwfrx/auGoBhVvzrL7YlPxOBtbI=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F8C3A541" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div>
+       <img id="HeaderImage" class="float" src="Images/Logo.png" alt="Virtual EMS Logo" style="height:50px;" />
+       <h1>EMS Web App</h1>
+       <div class="row">
+            <span id="ErrorMessage"></span>
+		</div>
+		<div class="row">
+			<p><strong><span id="DetailsLabel"></span></strong>&nbsp;&nbsp;<span id="ErrorDetails">There was a problem attempting to complete the action you requested. Please try again at a later time.</span></p>
+		</div>
+    </form>
+</body>
+</html>
