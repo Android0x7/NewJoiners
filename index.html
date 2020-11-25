@@ -150,7 +150,7 @@
                     <li data-bind="css: { &#39;no-click&#39;: NavigateUrl.length == 0 }">
                         <a data-bind="css: { &#39;current-page&#39;: $root.OnMenuItemPage(NavigateUrl) }, attr: {&#39;href&#39;: NavigateUrl.length &gt; 0 ? NavigateUrl : &#39;#&#39;, &#39;title&#39;: vems.decodeHtml(Text)}, click: $root.menuItemClicked" href="#GettingStarted" title="Getting Started">
                             <i class="fa fa-calendar-plus-o" data-bind="css: IconClass"></i>
-                            <span data-bind="text: vems.decodeHtml(Text)">Getting Started</span>
+                            <span data-bind="text: vems.decodeHtml(Text)">Getting Started</span> 
                         </a>
                     </li>
 
@@ -482,19 +482,19 @@
             <div class="modal-body">
                 <ul id="location-details-tabs" class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active location-details-tab" style="max-width: 25%;">
-                        <a href="https://reservations.accenture.com/reserve-space/Default.aspx#mainContainer" aria-controls="mainContainer" role="tab" data-toggle="tab">Room Details</a>
+                        <a href="#mainContainer" aria-controls="mainContainer" role="tab" data-toggle="tab">Room Details</a>
                     </li>
                     <li role="presentation" class="location-details-tab" style="max-width: 20%;">
-                        <a href="https://reservations.accenture.com/reserve-space/Default.aspx#setupContainer" aria-controls="setupContainer" role="tab" data-toggle="tab" data-bind="visible: setupDetails().length &gt; 0" style="display: none;">Setup Types</a>
+                        <a href="#setupContainer" aria-controls="setupContainer" role="tab" data-toggle="tab" data-bind="visible: setupDetails().length &gt; 0" style="display: none;">Setup Types</a>
                     </li>
                     <li role="presentation" class="location-details-tab" style="max-width: 20%;">
-                        <a href="https://reservations.accenture.com/reserve-space/Default.aspx#featuresContainer" aria-controls="featuresContainer" role="tab" data-toggle="tab" data-bind="visible: features().length &gt; 0" style="display: none;">Features</a>
+                        <a href="#featuresContainer" aria-controls="featuresContainer" role="tab" data-toggle="tab" data-bind="visible: features().length &gt; 0" style="display: none;">Features</a>
                     </li>
                     <li role="presentation" class="location-details-tab" style="max-width: 15%;">
-                        <a href="https://reservations.accenture.com/reserve-space/Default.aspx#imagesContainer" aria-controls="imagesContainer" role="tab" data-toggle="tab" data-bind="visible: images().length &gt; 0" style="display: none;">Images</a>
+                        <a href="#imagesContainer" aria-controls="imagesContainer" role="tab" data-toggle="tab" data-bind="visible: images().length &gt; 0" style="display: none;">Images</a>
                     </li>
                     <li role="presentation" data-bind="visible: vems.hasBrowseForSpace === 1" class="location-details-tab" style="max-width: 20%;">
-                        <a href="https://reservations.accenture.com/reserve-space/Default.aspx#availabilityContainer" aria-controls="availabilityContainer" role="tab" data-toggle="tab" id="availability-tab">Availability</a>
+                        <a href="#availabilityContainer" aria-controls="availabilityContainer" role="tab" data-toggle="tab" id="availability-tab">Availability</a>
                     </li>
                 </ul>
                 <div class="tab-content">
